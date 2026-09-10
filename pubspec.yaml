@@ -40,9 +40,12 @@ dependencies:
   http: ^1.6.0
   dio: ^5.11.0
   dio_cookie_manager: ^3.5.0
-  pretty_dio_logger: ^1.4.0
   flutter_launcher_icons: ^0.14.4
   json_annotation: ^4.12.0
+  cookie_jar: ^4.0.9
+  path_provider: ^2.1.6
+  html: ^0.15.7
+  talker_dio_logger: ^5.1.20
 
 dev_dependencies:
   flutter_test:

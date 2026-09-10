@@ -1,3 +1,6 @@
+import 'package:ao3_dweller/data/models/filters/people-filter.dart';
+import 'package:ao3_dweller/data/models/filters/work-filter.dart';
+import 'package:ao3_dweller/data/network/API.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -28,7 +31,7 @@ class MyApp extends StatelessWidget {
         //
         // This works for code too, not just values: Most code changes can be
         // tested with just a hot reload.
-        colorScheme: .fromSeed(seedColor: Colors.deepPurple),
+        colorScheme: .fromSeed(seedColor: Color.fromRGBO(151, 0, 0, 1.0), brightness: .dark),
       ),
       home: const MyHomePage(title: 'Flutter Demo Home Page'),
     );
@@ -56,7 +59,13 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   int _counter = 0;
 
-  void _incrementCounter() {
+  Future<void> _incrementCounter() async {
+    // print(await API().getAutocomplete("tag", "kpop"));
+    // print(await API().getChapter(74390911, 194190896));
+    // PeopleFilter temp = PeopleFilter();
+    // temp.query = "arsonide";
+    // print(await API().getSearch(temp));
+
     setState(() {
       // This call to setState tells the Flutter framework that something has
       // changed in this State, which causes it to rerun the build method below
