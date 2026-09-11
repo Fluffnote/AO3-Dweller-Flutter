@@ -1,6 +1,7 @@
 import 'package:cookie_jar/cookie_jar.dart';
 import 'package:dio/dio.dart';
 import 'package:dio_cookie_manager/dio_cookie_manager.dart';
+import 'package:dio_smart_retry/dio_smart_retry.dart';
 import 'package:http/retry.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:talker_dio_logger/talker_dio_logger_interceptor.dart';
@@ -40,6 +41,16 @@ class ClientKeeper {
         printResponseMessage: true,
         printResponseData: false,
       ),
+    ));
+    _client!.interceptors.add(RetryInterceptor(
+      dio: _client!,
+      // logPrint: print, // specify log function (optional)
+      retries: 3, // retry count (optional)
+      retryDelays: const [ // set delays between retries (optional)
+        Duration(seconds: 1), // wait 1 sec before first retry
+        Duration(seconds: 3), // wait 2 sec before second retry
+        Duration(seconds: 10), // wait 3 sec before third retry
+      ],
     ));
 
     return _client!;

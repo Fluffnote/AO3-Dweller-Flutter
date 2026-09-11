@@ -6,7 +6,7 @@ class Chapter {
   int id = 0;
   int workId = 0;
   int nextId = 0;
-  int order = 1;
+  int order = 0;
 
   // Main info
   String chapterListHeader = "";

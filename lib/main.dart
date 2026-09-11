@@ -1,7 +1,10 @@
+import 'package:ao3_dweller/data/models/chapter.dart';
 import 'package:ao3_dweller/data/models/filters/people-filter.dart';
 import 'package:ao3_dweller/data/models/filters/work-filter.dart';
 import 'package:ao3_dweller/data/network/API.dart';
 import 'package:flutter/material.dart';
+
+import 'data/models/work.dart';
 
 void main() {
   runApp(const MyApp());
@@ -31,9 +34,10 @@ class MyApp extends StatelessWidget {
         //
         // This works for code too, not just values: Most code changes can be
         // tested with just a hot reload.
-        colorScheme: .fromSeed(seedColor: Color.fromRGBO(151, 0, 0, 1.0), brightness: .dark),
+        colorScheme: .fromSeed(seedColor: Color.fromRGBO(151, 0, 0, 1.0), brightness: .light),
       ),
       home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      debugShowCheckedModeBanner: false,
     );
   }
 }
@@ -61,10 +65,12 @@ class _MyHomePageState extends State<MyHomePage> {
 
   Future<void> _incrementCounter() async {
     // print(await API().getAutocomplete("tag", "kpop"));
-    // print(await API().getChapter(74390911, 194190896));
-    // PeopleFilter temp = PeopleFilter();
-    // temp.query = "arsonide";
-    // print(await API().getSearch(temp));
+    // Chapter temp = await API().getChapter(74390911, 194190896);
+    // Work temp = await API().getWork(74390911);
+    // print(await temp);
+    WorkFilter temp = WorkFilter();
+    temp.query = "arsonide";
+    print(await API().getSearch(temp, null));
 
     setState(() {
       // This call to setState tells the Flutter framework that something has
