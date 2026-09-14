@@ -1,7 +1,7 @@
 import 'package:ao3_dweller/data/models/chapter.dart';
 import 'package:ao3_dweller/data/models/support/symbols.dart';
 import 'package:ao3_dweller/data/models/work.dart';
-import 'package:ao3_dweller/data/parsers/parser-chapter.dart';
+import 'package:ao3_dweller/data/parsers/parser_chapter.dart';
 import 'package:ao3_dweller/data/parsers/parser.dart';
 import 'package:html/dom.dart';
 

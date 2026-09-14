@@ -1,6 +1,6 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'auto-entry.dart';
+part of 'auto_entry.dart';
 
 // **************************************************************************
 // JsonSerializableGenerator

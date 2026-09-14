@@ -1,13 +1,15 @@
 import 'package:ao3_dweller/data/models/chapter.dart';
-import 'package:ao3_dweller/data/models/filters/people-filter.dart';
-import 'package:ao3_dweller/data/models/filters/work-filter.dart';
-import 'package:ao3_dweller/data/network/API.dart';
+import 'package:ao3_dweller/data/models/filters/filter_people.dart';
+import 'package:ao3_dweller/data/models/filters/filter_work.dart';
+import 'package:ao3_dweller/data/network/api.dart';
 import 'package:flutter/material.dart';
 
+import 'data/database/db.dart';
 import 'data/models/work.dart';
 
-void main() {
+Future<void> main() async {
   runApp(const MyApp());
+  await DB.instance.database;
 }
 
 class MyApp extends StatelessWidget {

@@ -1,6 +1,6 @@
 import 'package:json_annotation/json_annotation.dart';
 
-part 'auto-entry.g.dart';
+part 'auto_entry.g.dart';
 
 @JsonSerializable()
 class AutocompleteEntry {

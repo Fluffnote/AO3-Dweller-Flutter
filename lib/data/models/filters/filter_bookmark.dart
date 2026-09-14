@@ -1,6 +1,6 @@
-import 'package:ao3_dweller/data/models/support/param-map.dart';
+import 'package:ao3_dweller/data/models/support/param_map.dart';
 
-import '../support/search-options.dart';
+import '../support/search_options.dart';
 import 'filter.dart';
 
 class BookmarkFilter implements Filter{

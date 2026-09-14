@@ -1,6 +1,6 @@
 import 'package:json_annotation/json_annotation.dart';
 
-part 'param-map.g.dart';
+part 'param_map.g.dart';
 
 // Creating a single json generator for consolidation purposes
 @JsonSerializable()

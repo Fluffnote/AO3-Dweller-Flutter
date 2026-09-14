@@ -1,4 +1,4 @@
-import 'package:ao3_dweller/data/models/support/param-map.dart';
+import 'package:ao3_dweller/data/models/support/param_map.dart';
 
 abstract class Filter {
   String searchBase = "";
