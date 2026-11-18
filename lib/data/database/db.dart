@@ -55,8 +55,8 @@ class DB {
 
   Future onOpen(Database db) async {
     // Cache clean up
-    await db.execute("DELETE FROM WORK WHERE ID NOT IN (SELECT WORK_ID FROM LIBRARY)");
-    await db.execute("DELETE FROM WORK_TAGS WHERE WORK_ID NOT IN (SELECT ID FROM WORK)");
-    await db.execute("DELETE FROM TAG WHERE ID NOT IN (SELECT TAG_ID FROM WORK_TAGS)");
+    // await db.execute("DELETE FROM WORK WHERE ID NOT IN (SELECT WORK_ID FROM LIBRARY)");
+    // await db.execute("DELETE FROM WORK_TAGS WHERE WORK_ID NOT IN (SELECT ID FROM WORK)");
+    // await db.execute("DELETE FROM TAG WHERE ID NOT IN (SELECT TAG_ID FROM WORK_TAGS)");
   }
 }

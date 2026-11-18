@@ -10,8 +10,8 @@ class ChapterTbl extends Table {
   List<String> creationStmts = [
     """
     CREATE TABLE IF NOT EXISTS CHAPTER (
-      CHAPTER_ID          INTEGER  NOT NULL,
       WORK_ID             INTEGER  NOT NULL,
+      CHAPTER_ID          INTEGER  NOT NULL,
       NEXT_ID             INTEGER,
       ORDER_NUM           INTEGER,
       WORK_TITLE          TEXT     NOT NULL,

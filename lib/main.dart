@@ -1,3 +1,4 @@
+import 'package:ao3_dweller/data/dtos/work.dart';
 import 'package:ao3_dweller/data/models/chapter.dart';
 import 'package:ao3_dweller/data/models/filters/filter_people.dart';
 import 'package:ao3_dweller/data/models/filters/filter_work.dart';
@@ -5,6 +6,7 @@ import 'package:ao3_dweller/data/network/api.dart';
 import 'package:flutter/material.dart';
 
 import 'data/database/db.dart';
+import 'data/dtos/chapter.dart';
 import 'data/models/work.dart';
 
 Future<void> main() async {
@@ -36,7 +38,7 @@ class MyApp extends StatelessWidget {
         //
         // This works for code too, not just values: Most code changes can be
         // tested with just a hot reload.
-        colorScheme: .fromSeed(seedColor: Color.fromRGBO(151, 0, 0, 1.0), brightness: .light),
+        colorScheme: .fromSeed(seedColor: Color.fromRGBO(151, 0, 0, 1.0), brightness: .dark),
       ),
       home: const MyHomePage(title: 'Flutter Demo Home Page'),
       debugShowCheckedModeBanner: false,
@@ -67,7 +69,9 @@ class _MyHomePageState extends State<MyHomePage> {
 
   Future<void> _incrementCounter() async {
     // print(await API().getAutocomplete("tag", "kpop"));
-    // Chapter temp = await API().getChapter(74390911, 194190896);
+    // Work temp = await WorkDTO().getWork(74390911, 2);
+    // Chapter temp = await ChapterDTO().getChapter(74390911, 194682461, 1);
+    // Chapter temp = await ChapterDTO().getChapter(74390911, 196122716, 1);
     // Work temp = await API().getWork(74390911);
     // print(await temp);
     WorkFilter temp = WorkFilter();

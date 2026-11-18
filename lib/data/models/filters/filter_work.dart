@@ -15,9 +15,9 @@ class WorkFilter implements Filter {
   String title = "";
   String creators = "";
   String revisedAt = "";
-  CompletionStatus complete = CompletionStatus.all;
-  Crossovers crossover = Crossovers.include;
-  LanguageOptions language = LanguageOptions.any;
+  CompletionStatus complete = .all;
+  Crossovers crossover = .include;
+  LanguageOptions language = .any;
 
   // Work Tags
   String ratingIds = "";
@@ -38,8 +38,8 @@ class WorkFilter implements Filter {
   String bookmarksCount = "";
 
   // Search
-  SortColumnWork sortColumn = SortColumnWork.bestMatch;
-  SortDirection sortDirection = SortDirection.desc;
+  SortColumnWork sortColumn = .bestMatch;
+  SortDirection sortDirection = .desc;
 
   @override
   void copyFrom(Filter input) {

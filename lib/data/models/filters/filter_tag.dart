@@ -11,10 +11,10 @@ class TagFilter implements Filter{
 
   String query = "";
   List<String> fandoms = [];
-  TagTypes type = TagTypes.any;
-  TagWrangling wranglingStatus = TagWrangling.any;
-  SortColumnTags sortColumn = SortColumnTags.name;
-  SortDirection sortDirection = SortDirection.asc;
+  TagTypes type = .any;
+  TagWrangling wranglingStatus = .any;
+  SortColumnTags sortColumn = .name;
+  SortDirection sortDirection = .asc;
 
   @override
   void copyFrom(Filter input) {

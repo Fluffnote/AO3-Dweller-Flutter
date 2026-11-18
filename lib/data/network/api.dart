@@ -55,7 +55,10 @@ class API {
   }
 
   Future<Chapter> getChapter(int workId, int chapterId) async {
-    Document doc =  await getDocFromURI(path: "works/$workId/chapters/$chapterId", params: {"view_adult": "true"});
+    String path;
+    if (chapterId > 0) path = "works/$workId/chapters/$chapterId";
+    else path = "works/$workId"; // One-shots or no distinct chapter link
+    Document doc =  await getDocFromURI(path: path, params: {"view_adult": "true"});
     return ChapterParser().parse(doc);
   }
 }

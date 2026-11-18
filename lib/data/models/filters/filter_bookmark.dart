@@ -12,9 +12,9 @@ class BookmarkFilter implements Filter{
   // Work Info
   String workQuery = "";
   List<String> workTags = [];
-  BookmarkTypes types = BookmarkTypes.any;
+  BookmarkTypes types = .any;
   String wordCount = "";
-  LanguageOptions language = LanguageOptions.any;
+  LanguageOptions language = .any;
   String dateUpdated = "";
 
   // Bookmark Info
@@ -27,7 +27,7 @@ class BookmarkFilter implements Filter{
   String dateBookmarked = "";
 
   // Search
-  SortByBookmark sortBy = SortByBookmark.bestMatch;
+  SortByBookmark sortBy = .bestMatch;
 
 
   @override

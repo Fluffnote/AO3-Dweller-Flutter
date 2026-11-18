@@ -30,7 +30,6 @@ class WorkTbl extends Table {
       HITS              INTEGER,
       LAST_FETCHED_DATE DATETIME,
       PARSER_VERSION    INTEGER,
-      BOOKMARKED INTEGER DEFAULT (0) NOT NULL,
       CONSTRAINT WORK_PK PRIMARY KEY (ID)
     )
     """,
